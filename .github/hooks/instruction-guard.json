@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "command",
+        "command": "powershell -NoProfile -File .github/hooks/instruction-guard.ps1",
+        "timeout": 10
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "files.associations": {
+    "*.meta": "yaml",
+    "*.unity": "yaml",
+    "*.prefab": "yaml",
+    "*.asset": "yaml",
+    "*.controller": "yaml",
+    "*.anim": "yaml",
+    "*.overrideController": "yaml",
+    "*.physicMaterial": "yaml",
+    "*.physicsMaterial2D": "yaml",
+    "*.playable": "yaml",
+    "*.mask": "yaml",
+    "*.brush": "yaml",
+    "*.terrainlayer": "yaml",
+    "*.spriteatlas": "yaml",
+    "*.inputactions": "json"
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.vs": true,
+    "**/Library": true,
+    "**/Temp": true,
+    "**/obj": true,
+    "**/Logs": true,
+    "**/UserSettings": true,
+    "**/*.csproj": true,
+    "**/*.sln": true,
+    "**/*.slnx": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.cs": "${capture}.cs.meta",
+    "*.shader": "${capture}.shader.meta",
+    "*.mat": "${capture}.mat.meta",
+    "*.prefab": "${capture}.prefab.meta",
+    "*.asset": "${capture}.asset.meta",
+    "*.unity": "${capture}.unity.meta",
+    "*.controller": "${capture}.controller.meta",
+    "*.anim": "${capture}.anim.meta",
+    "*.inputactions": "${capture}.inputactions.meta"
+  },
+  "dotnet.defaultSolution": "{PROJECT_NAME}.slnx"
+}
