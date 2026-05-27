@@ -10,7 +10,7 @@ Scaffold a new system end-to-end following project conventions.
 Ask the user for:
 1. **System name** (e.g., "Inventory", "Dialogue", "Weather")
 2. **Pattern type** — Singleton manager, per-entity component, self-registering registry, or hybrid
-3. **Key interfaces** — Does it implement any existing interfaces (ISaveable, ISelectable, etc.)?
+3. **Key interfaces** — Does it need to implement any project interfaces? (None exist yet; document here when added)
 4. **Dependencies** — Which existing systems does it interact with? (events to subscribe to, singletons to query)
 5. **UI panel** — Does it need a detail/info panel? If so, what data does it display?
 
@@ -25,7 +25,6 @@ Ask the user for:
 - Create script folder: `Assets/Scripts/{SystemName}/`
 - Create main MonoBehaviour with:
   - `[SerializeField] [Tooltip()]` for inspector fields
-  - `#region` blocks for code organization
   - Singleton pattern (if applicable): `public static {ClassName} Instance { get; private set; }` in Awake
   - Event declarations: `public event Action<T> On{EventName};`
   - Interface implementations (if applicable)
@@ -47,10 +46,11 @@ Ask the user for:
   - Unbind: unsubscribe all events, clean up dynamic content
 
 ### 6. Add ISaveable (if stateful)
+*(Not yet implemented in the project — skip until SaveSystem wiring is designed)*
 - Create `[Serializable]` save data struct
 - Implement ISaveable: SaveID, CaptureState, RestoreState
 - Self-register in OnEnable, unregister in OnDisable
-- Handle SO-name serialization via GameRegistry (if applicable)
+- Handle SO-name serialization via project registry (if applicable, once SaveSystem is implemented)
 
 ### 7. Update Instruction File
 - Fill in Key Files table with the created scripts
